@@ -41,11 +41,11 @@ def trueLength(line):
         turtle = True
         return len(line) + 1
 
-def printHeading(line, track=True):
+def printHeading(line, colour=GREEN):
     raw = line.strip()
     line_length = trueLength(raw)
-    top_border = GREEN + "╔" + ("═" * (line_length + 2)) + "╗"
-    heading = f"║ {RESET}{raw}{GREEN} ║"
+    top_border = colour + "╔" + ("═" * (line_length + 2)) + "╗"
+    heading = f"║ {RESET}{raw}{colour} ║"
     bot_border = "╚" + ("═" * (line_length + 2)) + "╝" + RESET
     print(top_border)
     print(heading)
