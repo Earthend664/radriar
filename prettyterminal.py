@@ -32,7 +32,7 @@ if os_type == "Windows":
 else:
     TICKED = "☑"
 
-def trueLength(line):
+def _trueLength(line):
     colours = (GREEN, PURPLE, BLUE, RED, YELLOW, MAGENTA, RESET, BOLD)
     for colour in colours:
         if colour in line:
@@ -44,7 +44,7 @@ def trueLength(line):
 
 def printHeading(line, colour=GREEN):
     raw = line.strip()
-    line_length = trueLength(raw)
+    line_length = _trueLength(raw)
     top_border = colour + "╔" + ("═" * (line_length)) + "╗"
     heading = f"║ {RESET}{raw}{colour} ║"
     bot_border = "╚" + ("═" * (line_length + 2)) + "╝" + RESET
