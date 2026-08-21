@@ -46,9 +46,9 @@ def _trueLength(line):
 def printHeading(line, colour=BLUE):
     line = line.strip()
     line_length = _trueLength(line)
-    top_border = "\n" + colour + "┌" + ("─" * (line_length + 2)) + "┐"
-    heading = f"│ {RESET}{line}{colour} │"
-    bot_border = "└" + ("─" * (line_length + 2)) + "┘" + RESET
+    top_border = "\n" + colour + "┏" + ("━" * (line_length + 2)) + "┓"
+    heading = f"┃ {RESET}{raw}{colour} ┃"
+    bot_border = "┗" + ("━" * (line_length + 2)) + "┛" + RESET
     print(top_border)
     print(heading)
     print(bot_border)
