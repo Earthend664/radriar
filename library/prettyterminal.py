@@ -42,6 +42,15 @@ def _trueLength(line):
         return len(line) + 1
     return len(line)
 
+def printTitle(line, colour=GREEN):
+    raw = line.strip()
+    line_length = _trueLength(raw)
+    top_border = "\n" + colour + "╔" + ("═" * (line_length + 2)) + "╗"
+    heading = f"║ {RESET}{raw}{colour} ║"
+    bot_border = "╚" + ("═" * (line_length + 2)) + "╝" + RESET
+    print(top_border)
+    print(heading)
+    print(bot_border)
 
 def printHeading(line, colour=BLUE):
     line = line.strip()
@@ -49,16 +58,6 @@ def printHeading(line, colour=BLUE):
     top_border = "\n" + colour + "┏" + ("━" * (line_length + 2)) + "┓"
     heading = f"┃ {RESET}{raw}{colour} ┃"
     bot_border = "┗" + ("━" * (line_length + 2)) + "┛" + RESET
-    print(top_border)
-    print(heading)
-    print(bot_border)
-
-def printTitle(line, colour=GREEN):
-    raw = line.strip()
-    line_length = _trueLength(raw)
-    top_border = "\n" + colour + "╔" + ("═" * (line_length + 2)) + "╗"
-    heading = f"║ {RESET}{raw}{colour} ║"
-    bot_border = "╚" + ("═" * (line_length + 2)) + "╝" + RESET
     print(top_border)
     print(heading)
     print(bot_border)
