@@ -13,7 +13,7 @@ def extract(pattern, string): # Returns a string matching a regex
     return target
 
 
-def breakdownURI(uri):
+def breakdownURI(uri): # Takes a uri and returns a dictionary object with the protocol, domain, and path.
     protocol = "https://" if "https://" in uri else "http://"
     uri = uri.replace(protocol, "")
     uri  = uri.partition("/")
