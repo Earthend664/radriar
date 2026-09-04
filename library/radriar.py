@@ -11,3 +11,18 @@ def extract(pattern, string): # Returns a string matching a regex
     search = re.search(pattern, string)
     target = search.group
     return target
+
+
+def breakdownURI(uri):
+    protocol = "https://" if "https://" in uri else "http://"
+    uri = uri.replace(protocol, "")
+    uri  = uri.partition("/")
+    domain = uri[0]
+    path = uri[1] + uri[2]
+
+    output = {
+        "protocol": protocol,
+        "domain": domain,
+        "path": path
+    }
+    return output
