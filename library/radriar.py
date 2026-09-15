@@ -29,5 +29,5 @@ def breakdownURI(uri): # Takes a uri and returns a dictionary object with the pr
 
 
 regexes = {
-    "ip": r"([1-2]{0,1}[1-9]{0,1}[0-9]\.){3}[1-2]{0,1}[1-9]{0,1}[0-9]"
+    "ip": r"([1-2]{0,1}[0-9]{0,1}[0-9]\.){3}[1-2]{0,1}[0-9]{0,1}[0-9]"
 }
