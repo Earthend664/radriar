@@ -26,3 +26,15 @@ def code_block(code, language=None):
     output = f"""```{language}
 {code}
 ```"""
+
+def dotpoint(string, indentation=1):
+    output = f"{' '*indentation}- {string}"
+    return output
+
+def unchecked_task(string, indentation=1):
+    output = f"{' '*indentation}- [ ] {string}"
+    return output
+
+def checked_task(string, indentation=1):
+    output = f"{' '*indentation}- [x] {string}"
+    return output
