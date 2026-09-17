@@ -28,6 +28,12 @@ def breakdownURI(uri): # Takes a uri and returns a dictionary object with the pr
     return output
 
 
+def replacePrevious(string):
+    sys.stdout.write("\033[F\033[K")
+    sys.stdout.flush()
+    print(string)
+
+
 regexes = {
     "ip": r"([1-2]{0,1}[0-9]{0,1}[0-9]\.){3}[1-2]{0,1}[0-9]{0,1}[0-9]"
 }
