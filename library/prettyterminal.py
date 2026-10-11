@@ -1,4 +1,4 @@
-import platform
+import platform, sys
 # Format Codes
 BOLD = '\033[1m'
 UNDERLINE = '\033[4m'
@@ -41,6 +41,11 @@ def _trueLength(line):
         turtle = True
         return len(line) + 1
     return len(line)
+
+def clearLine():
+    sys.stdout.write('\033[1A')
+    sys.stdout.write('\033[2K')
+    sys.stdout.flush()
 
 def printTitle(line, colour=GREEN):
     raw = line.strip()
