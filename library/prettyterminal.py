@@ -57,11 +57,11 @@ def printTitle(line, colour=GREEN):
     print(heading)
     print(bot_border)
 
-def printHeading(line, colour=BLUE):
+def printHeading(line, colour=BLUE, bold=True):
     line = line.strip()
     line_length = _trueLength(line)
     top_border = "\n" + colour + "┏" + ("━" * (line_length + 2)) + "┓"
-    heading = f"┃ {RESET}{line}{colour} ┃"
+    heading = f"┃ {RESET}{BOLD if bold}{line}{RESET}{colour} ┃"
     bot_border = "┗" + ("━" * (line_length + 2)) + "┛" + RESET
     print(top_border)
     print(heading)
