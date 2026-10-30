@@ -1,8 +1,9 @@
 import platform, sys
 # Format Codes
 BOLD = '\033[1m'
-UNDERLINE = '\033[4m'
 ITALIC = '\033[3m'
+UNDERLINE = '\033[4m'
+STRIKETHROUGH = '\033[9m'
 
 # Color escape codes
 RED = '\033[31m'
@@ -11,6 +12,15 @@ YELLOW = '\033[33m'
 BLUE = '\033[34m'
 MAGENTA = '\033[35m'
 PURPLE = '\033[;35m'
+CYAN = '\033[36m'
+# Strong colour escade codes
+S_RED = '\033[91m'
+S_GREEN = '\033[92m'
+S_YELLOW = '\033[93m'
+S_BLUE = '\033[94m'
+S_MAGENTA = '\033[95m'
+S_CYAN = '\033[96m'
+# Clears all styles
 RESET = '\033[0m'  # Clear all styles
 
 # Characters
