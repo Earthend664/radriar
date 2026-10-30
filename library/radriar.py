@@ -1,6 +1,6 @@
 import re, sys
 
-def importFile(file_path): # Loads a file as a list into memory, removing newlines and white-spaces
+def loadWordlist(file_path): # Loads a file as a list into memory, removing newlines and white-spaces
     with open(file_path, 'r') as f:
         output = []
         for line in f:
@@ -35,9 +35,9 @@ def replacePrevious(string):
 
 
 def wipePreviousX(n):
-	for i in range(n):
-		sys.stdout.write("\033[F\033[K")
-		sys.stdout.flush()
+    for i in range(n):
+        sys.stdout.write("\033[F\033[K")
+        sys.stdout.flush()
 
 
 regexes = {
