@@ -34,6 +34,12 @@ def replacePrevious(string):
     print(string)
 
 
+def wipePreviousX(n):
+	for i in range(n):
+		sys.stdout.write("\033[F\033[K")
+		sys.stdout.flush()
+
+
 regexes = {
     "ip": r"([1-2]{0,1}[0-9]{0,1}[0-9]\.){3}[1-2]{0,1}[0-9]{0,1}[0-9]",
     "email": r"[a-zA-Z0-9\-_\.]+@[^\.]+\.[a-z]{1,3}(\.[a-z]{1,3}){0,1}"
