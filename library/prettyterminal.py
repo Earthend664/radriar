@@ -3,9 +3,11 @@ import platform, sys
 BOLD = '\033[1m'
 ITALIC = '\033[3m'
 UNDERLINE = '\033[4m'
+FLASHING = '\033[5m'
 STRIKETHROUGH = '\033[9m'
 
 # Color escape codes
+BLACK = '\033[30m'
 RED = '\033[31m'
 GREEN = '\033[32m'
 YELLOW = '\033[33m'
@@ -13,13 +15,24 @@ BLUE = '\033[34m'
 MAGENTA = '\033[35m'
 PURPLE = '\033[;35m'
 CYAN = '\033[36m'
-# Strong colour escade codes
+# Strong colour escape codes
 S_RED = '\033[91m'
 S_GREEN = '\033[92m'
 S_YELLOW = '\033[93m'
 S_BLUE = '\033[94m'
 S_MAGENTA = '\033[95m'
 S_CYAN = '\033[96m'
+
+# Background colour escape codes
+WHITE_BACKGROUND = '\033[7m'
+RED_BACKGROUND = '\033[41m'
+GREEN_BACKGROUND = '\033[42m'
+YELLOW_BACKGROUND = '\033[43m'
+BLUE_BACKGROUND = '\033[44m'
+PURPLE_BACKGROUND = '\033[45m'
+CYAN_BACKGROUND = '\033[46m'
+GREY_BACKGROUND = '\033[47m'
+
 # Clears all styles
 RESET = '\033[0m'  # Clear all styles
 
@@ -77,6 +90,14 @@ def printHeading(line, colour=BLUE, bold=True):
     print(heading)
     print(bot_border)
 
+def infoPrint(string, indent=0):
+    print(f"{"  "*indent}{BLUE}[+]{RESET} {string}")
+
+def warningPrint(string):
+    print(f"{YELLOW}[+]{RESET} {string}")
+
+def strongWarningPrint(string):
+    print(f"{RED}[+]{RESET} {string}")
 
 class TerminalTable:
     def __init__(self, table, title="Table", heading_row=True, print=True): # Expects to be given an "array table" (a list of lists)
