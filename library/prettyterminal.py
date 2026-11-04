@@ -101,6 +101,9 @@ def printHeading(line, colour=BLUE, bold=True):
 def debugPrint(string):
 	print(f"[{YELLOW}+{RESET}] {string}")
 
+def successPrint(string):
+	print(f"{GREEN}[+]{RESET} {string}")
+
 def infoPrint(string, indent=0):
     print(f"{"  "*indent}{BLUE}[+]{RESET} {string}")
 
