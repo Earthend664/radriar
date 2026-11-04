@@ -98,6 +98,9 @@ def printHeading(line, colour=BLUE, bold=True):
     print(heading)
     print(bot_border)
 
+def debugPrint(string):
+	print(f"[{YELLOW}+{RESET}] {string}")
+
 def infoPrint(string, indent=0):
     print(f"{"  "*indent}{BLUE}[+]{RESET} {string}")
 
