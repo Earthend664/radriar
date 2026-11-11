@@ -99,19 +99,31 @@ def printHeading(line, colour=BLUE, bold=True):
     print(bot_border)
 
 def debugPrint(string):
-	print(f"[{YELLOW}+{RESET}] {string}")
+    print(f"[{YELLOW}+{RESET}]{RESET} {string}")
 
-def successPrint(string):
-	print(f"{GREEN}[+]{RESET} {string}")
+def successPrint(string, alt=False):
+    if alt:
+        print(f"{BOLD}[{GREEN}+{RESET}{BOLD}]{RESET} {string}")
+    else:
+        print(f"{GREEN}{BOLD}[+]{RESET} {string}")
 
-def infoPrint(string, indent=0):
-    print(f"{"  "*indent}{BLUE}[+]{RESET} {string}")
+def infoPrint(string, indent=0, alt=False):
+    if alt:
+        print(f"{"  "*indent}{BOLD}[{BLUE}+{RESET}{BOLD}]{RESET} {string}")
+    else:        
+        print(f"{"  "*indent}{BLUE}{BOLD}[+]{RESET} {string}")
 
-def warningPrint(string):
-    print(f"{YELLOW}[+]{RESET} {string}")
+def warningPrint(string, alt=False):
+    if alt:
+        print(f"{BOLD}[{YELLOW}+{RESET}{BOLD}]{RESET} {string}")
+    else:
+        print(f"{YELLOW}{BOLD}[+]{RESET} {string}")
 
-def strongWarningPrint(string):
-    print(f"{RED}[+]{RESET} {string}")
+def strongWarningPrint(string, alt=False):
+    if alt:
+        print(f"{BOLD}[{RED}+{RESET}{BOLD}]{RESET} {string}")
+    else:
+        print(f"{RED}{BOLD}[+]{RESET} {string}")
 
 class TerminalTable:
     def __init__(self, table, title="Table", heading_row=True, print=True): # Expects to be given an "array table" (a list of lists)
