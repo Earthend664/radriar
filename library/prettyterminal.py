@@ -107,8 +107,8 @@ def successPrint(string, alt=False):
     else:
         print(f"{GREEN}{BOLD}[+]{RESET} {string}")
 
-def infoPrint(string, indent=0, colour=BLUE, bold=False, alt=False):
-    print(f"{"  "*indent}{BOLD if bold else ""}{"" if alt else colour}[{colour if alt else ""}+{RESET if alt else ""}{BOLD if bold else ""}]{RESET} {string}")
+def infoPrint(string, indent=0, colour=BLUE, bold=False, alt=False, end="\n"):
+    print(f"{"  "*indent}{BOLD if bold else ""}{"" if alt else colour}[{colour if alt else ""}+{RESET if alt else ""}{BOLD if bold else ""}]{RESET} {string}", end=end)
 
 def warningPrint(string, alt=False):
     if alt:
